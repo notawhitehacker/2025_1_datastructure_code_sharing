@@ -23,6 +23,6 @@ polynomial_t* subtract_polynomial(polynomial_t* pol1, polynomial_t* pol2);
 void align_polynomial(polynomial_t* pol);
 
 void print_term(void* t);
-int compare_by_degree(void* t1, void* t2);
+int compare_term(void* t1, void* t2);
 
 #endif

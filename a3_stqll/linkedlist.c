@@ -63,15 +63,14 @@ void delete_node(linked_list_t* l, void* e) {
 	if(n == NULL) {
 		return;
 	}
+	if(n->prev != NULL) {
+		n->prev->next = n->next;
+	} else {
+		l->head = n->next;
+	}
 	if(n->next != NULL) {
 		n->next->prev = n->prev;
-	} else {
-		n->prev->next = NULL;
 	}
-	if(n->prev != NULL) {
-		n->;;;;;;;;;;;prev->next = n->next;
-	} else {
-		n
 	free(n);
 }
 
