@@ -28,7 +28,4 @@ node_t* find_node(linked_list_t* l, void* e);
 void delete_node(linked_list_t* l, void* e);
 void make_linked_list_empty(linked_list_t* l);
 
-int node_count(linked_list_t* l);
-node_t** to_array(linked_list_t* l);
-
 #endif

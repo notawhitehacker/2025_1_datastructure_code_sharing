@@ -4,18 +4,17 @@
 
 #include "stack.h"
 
-enum FIX_MODE {
-    PREFIX=0, INFIX, POSTFIX
-}
-
 typedef struct {
-    char* expression;
+    char* p_expr;
+    int[2]* matching;
     int size;
-} expression_t;
+} parenthesis_expr_t;
 
-expression_t* new_expression(char* expr);
+parenthesis_expr_t* new_expression(char* expr);
 
-expression_t* convert_mode(char* expr, enum FIX_MODE mode);
+void parenthesis_matching(parenthesis_expr_t* p_ex);
+parenthesis_expr_t* postfix_mode(parenthesis_expr_t* pex);
+
 
 
 
