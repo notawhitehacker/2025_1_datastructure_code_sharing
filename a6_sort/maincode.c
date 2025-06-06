@@ -14,9 +14,8 @@ int main() {
 	int dur[5];
 	int avg_duration;
 
-
 	int size_list[21];
-	for(int i=1 ; i<=20; i++) {
+	for(int i=0 ; i<=20; i++) {
 		size_list[i] = 50000 * i;
 	}
 
@@ -35,8 +34,6 @@ int main() {
 			free(arr);
 		}
 		avg_duration = (dur[0]+dur[1]+dur[2]+dur[3]+dur[4]) / 5;
-	//	printf("#%d) size:%d, time:(trial1: %d, 2: %d, 3: %d, 4:%d, 5:%d), avg_time: %f\n"
-	//		, s, size_list[s], dur[0], dur[1], dur[2], dur[3], dur[4], avg_duration);
 		printf("(%d, %d)\n", size_list[s], avg_duration);
 	}
 	
@@ -52,8 +49,6 @@ int main() {
 			free(arr);
 		}
 		avg_duration = (dur[0]+dur[1]+dur[2]+dur[3]+dur[4]) / 5;
-	//	printf("#%d) size:%d, time:(trial1: %d, 2: %d, 3: %d, 4:%d, 5:%d), avg_time: %f\n"
-	//		, s, size_list[s], dur[0], dur[1], dur[2], dur[3], dur[4], avg_duration);
 		printf("(%d, %d)\n", size_list[s], avg_duration);
 	}
 
@@ -69,35 +64,7 @@ int main() {
 			free(h->list);
 		}
 		avg_duration = (dur[0]+dur[1]+dur[2]+dur[3]+dur[4]) / 5;
-	//	printf("#%d) size:%d, time:(trial1: %d, 2: %d, 3: %d, 4:%d, 5:%d), avg_time: %f\n"
-	//		, s, size_list[s], dur[0], dur[1], dur[2], dur[3], dur[4], avg_duration);
 		printf("(%d, %d)\n", size_list[s], avg_duration);
 	}
 
 }
-
-/*
-typedef struct {
-	array_t list;
-	int top;
-} heap_t;
-
-heap_t heap_init(size_t size);
-
-void build_max_heap(heap_t* h);
-void max_heapify(heap_t* h, index k);
-void heap_sort(heap_t* h);
-
-void print_heap(heap_t* h, size_t size);
-
-void merge_sort(array_t arr, size_t size);
-void quick_sort(array_t arr, index p, index r);
-
-typedef int index;
-
-typedef int* array_t;
-
-array_t array_init(size_t size);
-void print_array(array_t arr, size_t size, char* name);
-int random_int_val(); 
-*/

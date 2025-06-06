@@ -6,7 +6,7 @@
 #include "heap.h"
 
 heap_t* heap_init(size_t size) {
-	heap_t* h;
+	heap_t* h = (heap_t*)malloc(sizeof(heap_t));
 	h->list = (array_t)malloc(sizeof(int)*(size));
 	h->top = size-1;
 
